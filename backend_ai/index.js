@@ -11,7 +11,8 @@ const allowedOrigins = [
     "http://localhost:5173",
     "http://localhost:5174",
     "https://ai-resume-screening-7zmld0fcy-shraddhashandilya119s-projects.vercel.app",
-    "https://ai-resume-screening-khaki.vercel.app"
+    "https://ai-resume-screening-khaki.vercel.app",
+    "https://ai-resume-screening-git-main-shraddhashandilya119s-projects.vercel.app"
 ];
 
 app.use(cors({
@@ -22,7 +23,7 @@ app.use(cors({
         if (allowedOrigins.includes(origin)) {
             return callback(null, true);
         } else {
-            return callback(null, false);
+           return callback(new Error("Not allowed by CORS"));
         }
     },
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
