@@ -39,6 +39,11 @@ const ResumeRoutes = require('./Routes/resume');
 app.use('/api/user', UserRoutes);
 app.use('/api/resume', ResumeRoutes);
 
+app.get('/', (req, res) => {
+    res.send('Backend is running 🚀');
+});
+
+
 app.listen(PORT, () => {
     console.log("backend runing on port", PORT);
 });
