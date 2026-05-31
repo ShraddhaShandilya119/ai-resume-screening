@@ -1,9 +1,10 @@
 .sideBar{
     flex: 0.2;
-    background-color: #0b0b5a;
-    color: white;
+    background: linear-gradient(180deg, #064e4f, #033a3b);
+    color: #e6fffb;
     height: 100vh;
     flex-shrink: 0;
+    box-shadow: 4px 0 20px rgba(0,0,0,0.25);
 }
 
 .sideBarIcon{
@@ -16,14 +17,16 @@
 
 .sideBarTopContent{
     font-size: 26px;
+    color: #7ef9d9;
+    font-weight: 700;
 }
 
+/* Options container */
 .sideBarOptionsBlock{
     margin-top: 30px;
-
 }
 
-
+/* Each option */
 .sideBarOption{
     padding: 20px;
     display: flex;
@@ -31,11 +34,22 @@
     align-items: center;
     font-size: 22px;
     cursor: pointer;
-    color: white;
+    color: #d9fffa;
     text-decoration: none;
+    transition: all 0.3s ease;
+    border-radius: 10px;
 }
 
-.selectedOption{
-    background-color: rgb(72, 72, 222);
+/* Hover effect */
+.sideBarOption:hover{
+    background: rgba(126, 249, 217, 0.12);
+    color: #7ef9d9;
+    transform: translateX(4px);
+}
 
+/* Selected option */
+.selectedOption{
+    background: rgba(126, 249, 217, 0.18);
+    color: #7ef9d9;
+    border-left: 4px solid #7ef9d9;
 }

@@ -3,33 +3,50 @@
     height: 100vh;
     overflow: auto;
     padding: 50px;
-    background-color: whitesmoke;
+    background: linear-gradient(135deg, #e6fffb, #f5fffd);
     box-sizing: border-box;
 }
 
+/* Grid */
 .HistoryCardBlock {
     width: 100%;
     display: grid;
     gap: 20px;
-    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
+/* Card */
 .HistoryCard {
     width: 100%;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    box-shadow: 0 10px 20px rgba(3, 58, 59, 0.12);
     border-radius: 20px;
     padding: 20px;
     box-sizing: border-box;
+    border: 1px solid rgba(126, 249, 217, 0.25);
+    transition: 0.3s ease;
 }
 
+.HistoryCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(126, 249, 217, 0.25);
+}
+
+/* Percentage Text */
 .cardPercentage {
     font-size: 34px;
     text-align: center;
+    font-weight: 700;
+    color: #064e4f;
 }
 
+/* Responsive */
 @media screen and (max-width:780px) {
     .HistoryCardBlock {
-        
-        grid-template-columns: 1fr ;
+        grid-template-columns: 1fr;
+    }
+
+    .History {
+        padding: 25px;
     }
 }

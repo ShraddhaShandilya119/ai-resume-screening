@@ -5,10 +5,11 @@
     padding: 50px;
     display: flex;
     justify-content: space-between;
-    background-color: whitesmoke;
+    background: linear-gradient(135deg, #e6fffb, #f5fffd);
     box-sizing: border-box;
 }
 
+/* Grid container */
 .AdminBlock{
     width: 100%;
     display: grid;
@@ -16,20 +17,30 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
+/* Card */
 .AdminCard{
     width: 100%;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    box-shadow: 0 10px 20px rgba(3, 58, 59, 0.12);
     border-radius: 20px;
     padding: 20px;
     box-sizing: border-box;
+    border: 1px solid rgba(126, 249, 217, 0.25);
+    transition: 0.3s ease;
 }
 
+.AdminCard:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(126, 249, 217, 0.25);
+}
+
+/* Responsive */
 @media screen and (max-width:780px) {
     .Admin{
         padding: 20px;
     }
+
     .AdminBlock {
-        
-        grid-template-columns: 1fr ;
+        grid-template-columns: 1fr;
     }
 }
