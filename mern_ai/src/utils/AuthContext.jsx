@@ -13,14 +13,14 @@ const AuthProvider = ({ children }) => {
     );
 
     useEffect(() => {
-        const login = localStorage.getItem("isLogin");
-        const user = localStorage.getItem("userInfo");
+    const login = localStorage.getItem("isLogin");
+    const user = localStorage.getItem("userInfo");
 
-        if (login === "true" && user) {
-            setLogin(true);
-            setUserInfo(JSON.parse(user));
-        }
-    }, []);
+    if (login === "true" && user) {
+        setLogin(true);
+        setUserInfo(JSON.parse(user));
+    }
+}, []);
 
     return (
         <AuthContext.Provider value={{ isLogin, setLogin, userInfo, setUserInfo }}>

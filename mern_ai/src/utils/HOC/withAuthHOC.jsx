@@ -7,20 +7,25 @@ const WithAuthHOC = (WrappedComponent)=>{
     
     return (props)=>{
         const navigate = useNavigate();
-        const {setLogin} = useContext(AuthContext)
+        const {setLogin , setUserInfo } = useContext(AuthContext)
         useEffect(()=>{
             const isLogin = localStorage.getItem('isLogin');
+            const user = localStorage.getItem("userInfo");
 
-            if(!isLogin){
-                setLogin(false)
-                navigate('/')
+             if (isLogin !== "true") {
+                setLogin(false);
+                navigate("/");
+            } else {
+                setLogin(true);
 
-                return;
+                if (user) {
+                    setUserInfo(JSON.parse(user));
+                }
             }
-        },[navigate])
+        }, [navigate, setLogin, setUserInfo]);
 
         return <WrappedComponent {...props} />;
-    }
-}
+    };
+};
 
 export default WithAuthHOC;

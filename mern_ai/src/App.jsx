@@ -14,8 +14,8 @@ function App() {
     <div className='App'>
       <SideBar />
       <Routes>
-        <Route path='/' element={<Login />} />
-        <Route path='/dashboard' element={<Dashboard />} />
+        <Route path="/" element={<Login />} />
+<Route path="/dashboard" element={<Dashboard />} />
         <Route path='/history' element={<History />} />
         <Route path='/admin' element={<Admin />} />
       </Routes>

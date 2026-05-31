@@ -49,7 +49,7 @@ const SideBar = () => {
                 </Link>
                 
                 {
-                    userInfo?.role === 'admin' && 
+                    userInfo && userInfo.role === 'admin' && 
                 <Link to={'/admin'} className={[styles.sideBarOption, location.pathname === '/admin' ? styles.selectedOption : null].join(' ')}>
 
                     <AdminPanelSettingsIcon sx={{ fontSize: 22 }} />
