@@ -25,7 +25,7 @@ const handleLogin = async () => {
             photoUrl: user.photoURL
         };
 
-        console.log("LOGIN USER:", userData);
+        
 
         const response = await axios.post('/api/user', userData);
         console.log(response.data);
@@ -34,14 +34,16 @@ const handleLogin = async () => {
 
         setLogin(true);
 
-        localStorage.setItem("isLogin", true);
+        localStorage.setItem("isLogin", "true");
 
         localStorage.setItem(
             "userInfo",
             JSON.stringify(response.data.user)
         );
 
-        navigate('/dashboard');
+        setTimeout(() => {
+            navigate('/dashboard');
+        }, 100);
 
     } catch (err) {
 
