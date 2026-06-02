@@ -41,7 +41,7 @@ const handleLogin = async () => {
             JSON.stringify(response.data.user)
         );
 
-      window.location.href = "/dashboard";
+      navigate("/dashboard");
     } catch (err) {
 
         console.log("LOGIN ERROR:", err);
